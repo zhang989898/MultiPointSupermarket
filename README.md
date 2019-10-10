@@ -1,0 +1,2 @@
+# MultiPointSupermarket
+info
