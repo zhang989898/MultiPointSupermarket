@@ -1,0 +1,71 @@
+widtHeight($width, $height) {
+  width: $width;
+  height: $height;
+  display: block;
+}
+
+//单行文字溢出显示为...
+ellipsisOdd(){
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+//多行文字溢出显示为...
+ellipsisTwo(){
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+//上方1px线条
+setTopBorder() {
+  & {
+      position: relative;
+  }
+  &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: #ccc;
+      transform: scaleY(.5);
+  }
+}
+//下方1px线条
+setBottomBorder() {
+  & {
+      position: relative;
+  }
+  &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      background: #ccc;
+      transform: scaleY(.5);
+  }
+}
+//居中
+juzhong() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//居左
+juzuo() {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+//居右
+juyou() {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
